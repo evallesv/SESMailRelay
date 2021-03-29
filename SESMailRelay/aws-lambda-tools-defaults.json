@@ -1,0 +1,25 @@
+
+{
+    "Information" : [
+        "This file provides default values for the deployment wizard inside Visual Studio and the AWS Lambda commands added to the .NET Core CLI.",
+        "To learn more about the Lambda commands with the .NET Core CLI execute the following command at the command line in the project root directory.",
+        "dotnet lambda help",
+        "All the command line options for the Lambda command can be specified in this file."
+    ],
+    "profile"     : "default",
+    "region"      : "us-east-1",
+    "configuration" : "Release",
+    "framework"     : "net5.0",
+    "function-runtime" : "provided",
+    "function-memory-size" : 256,
+    "function-timeout"     : 30,
+    "function-handler"     : "bootstrap::SESMailRelay.Function::Handler",
+    "msbuild-parameters"   : " /p:PublishReadyToRun=false --self-contained true ",
+    "function-name"        : "SESMailRelay",
+    "function-description" : "",
+    "package-type"         : "Zip",
+    "function-role"        : "arn:aws:iam::550634946995:role/Lambda-SES-S3",
+    "tracing-mode"         : "PassThrough",
+    "environment-variables" : "\"DOTNET_SMR_FORWARDMAPPING\"=\"{ \"@vpf.solutions\": [\"evalle@outlook.com\", \"evalle626@gmail.com\"] }\";\"DOTNET_SMR_EMAILBUCKET\"=\"mail.vpf.solutions\";\"DOTNET_SMR_FROM\"=\"ses@vpf.solutions\";\"DOTNET_SMR_ALLOWPLUSSIGN\"=\"true\";\"DOTNET_SMR_EMAILKEYPREFIX\"=\"mail/\";\"DOTNET_SMR_SUBJECTPREFIX\"=\"FWD:\"",
+    "image-tag"             : ""
+}
